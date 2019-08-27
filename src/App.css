@@ -1,33 +1,258 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700&display=swap');
+
+/* Type styles */
+h1{
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+h2,
+h3, 
+h4{
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p{
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+a {
+  color: white;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 500;
+  
+}
+
+button a{
+  text-decoration: none;
+}
+
+.article-description p{
+  font-size: 18px;
+}
+
+.techTitle,
+.topicsTitle{
+  padding-left: 40px;;
+  color: #201b53;
+
+}
+
+
+/* END Type styles */
+
+.logo {
+  color: #4150a2;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 15px;
+}
+
+/* Menu Nav Styles */
+.mainNav {
+  background-color: #201b53;
+  list-style: none;
+  display: flex;
+  padding: 20px 25px;
+  color: white;
+  justify-content: right;
+  margin: 0;
+
+}
+
+.mainNav a{
+  text-decoration: none;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.mainNav a:hover,
+.mainNav a:focus,
+.mainNav a:active{
+  color: #4c8dff;
+}
+
+/* Search Bar */
+.search-bar{
+  padding: 20px 0 20px 35px;
+}
+
+.search-bar label{
+  color: #4150a2;
+  font-weight: bold;
+}
+
+.search-bar input{
+  box-shadow: 1px 1px 10px rgb(182, 182, 182);
+  border: none;
+  width: 300px;
+  line-height: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0 15px;
+}
+
+.search-bar button{
+  border: none;
+  background-color: #3880ff;
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  font-family: 'Maven Pro', sans-serif;
+  padding: 5px 15.4px;
+  box-shadow: 0 .5px 5px rgb(182, 182, 182);
+  cursor: pointer;
+  letter-spacing:0.06em;
+  font-weight: 500;
+}
+
+.search-bar button:hover{
+  background-color: #4c8dff;
+}
+
+/* Top Article Section */
+.topSection{
+  display: flex;
+  flex-direction: row;
+  margin: 20px 30px;
+}
+
+.topTitle{
+  color: #201b53;
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+.top-img{
+  width: 100%;
+}
+
+/* Tech Section */
+.techSection{
+  display: flex;
+  flex-direction: row;
+  margin: 20px 30px;
+}
+
+/* .techArticles{
+  border: 2px dashed yellow;
+} */
+
+.techArticles img{
+  width: 100%;
+}
+
+/* Articles Section Styles */
+.cardContainer{
+  margin: 0 50px;
+}
+
+.cardContent {
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-around;
+  width: 100%;
+}
+
+ .article-img{
+  max-width: 600px;
+  border: 1px solid red;
+}
+
+.imgDescBtn{
+  display: flex;
+  flex-direction: row;
+} 
+
+
+/* About page styles */
+.about{
+  margin: 20px 40px;
+}
+
+.about-content{
+  padding: 20px;
+}
+
+.about-paragraph a{
+  color: #201b53;
+}
+
+.footer{
+  background-color: #201b53;
+  padding: 25px;
+}
+
+.footer h4,
+.footer p{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.footer p{
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Media Queries */
+@media screen and (max-width: 675px){
+  .topSection{
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .techSection{
+    display: block;
+  }
+
+  .cardContainer{
+    margin: 20px 30px;
+  }
+
+  .imgDescBtn{
+    display: block;
+  } 
+
+  /* .article-img{
+    min-width: 100%;
+  } */
+}
+
+/* Media Queries */
+@media screen and (max-width: 400px){
+
+  .mainNav{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .search-bar input {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .topSection,
+  .businessSection
+  .techSection{
+    margin: 20px 10px;
+  }
+
+  .cardContainer{
+    margin: 20px 10px;
+  }
+
+  .imgDescBtn{
+    display: block;
+  } 
+
+  .article-img{
+    min-width: 100%;
   }
 }
