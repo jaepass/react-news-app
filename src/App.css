@@ -163,10 +163,17 @@ button a{
   justify-content: space-around;
   width: 100%;
 }
-
+/* 
  .article-img{
-  max-width: 600px;
-  border: 1px solid red;
+  min-width: 400px;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid red;
+} */
+
+.author-date {
+  padding-left: 20px;
+  padding-bottom: 15px;
 }
 
 .imgDescBtn{
@@ -228,6 +235,10 @@ button a{
 /* Media Queries */
 @media screen and (max-width: 400px){
 
+  .search-bar input{
+    border: 1px solid lightgrey;
+  }
+
   .mainNav{
     display: flex;
     flex-wrap: wrap;
@@ -238,10 +249,20 @@ button a{
     margin-bottom: 15px;
   }
 
-  .topSection,
-  .businessSection
+  .topSection{
+    margin: 20px 5px;
+
+  }
+
   .techSection{
     margin: 20px 10px;
+  }
+
+  .businessSection{
+    border: 1px solid rgba(57, 57, 57, 0.125);
+    border-radius: .25rem;
+    margin: 0;
+    padding: 0;
   }
 
   .cardContainer{

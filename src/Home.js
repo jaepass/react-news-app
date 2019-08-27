@@ -115,15 +115,19 @@ class Home extends React.Component {
                                     <IonCardHeader>
                                         <IonCardTitle>{article.title}</IonCardTitle>
                                     </IonCardHeader>
+                                    <div className="author-date">
                                     <IonCardSubtitle className="author">By   {article.author}&nbsp;
                                         | &nbsp;From {article.source.name}</IonCardSubtitle>
                                     <Moment format="MMM DD, YYYY"><h4>{article.publishedAt}</h4></Moment>
+                                    </div>
                                     
                                     <div className="imgDescBtn">
-                                        <Image className='article-img'urlToImage={article.urlToImage} />
+                                        <div className="col-md-6">
+                                        <Image className='article-img'urlToImage={article.urlToImage} /></div>
+                                        <div className="col-md-6">
                                         <div className="descBtn">
                                         <p className='article-description'>{article.description}</p>
-                                        <IonButton><a href={`${article.url}`} target="blank">Read More</a></IonButton>
+                                        <IonButton><a href={`${article.url}`} target="blank">Read More</a></IonButton></div>
                                         </div>
                                     </div>
                                 </IonCardContent>

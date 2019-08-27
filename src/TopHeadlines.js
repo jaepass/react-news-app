@@ -7,7 +7,7 @@ import { IonButton, IonCard, IonCardContent, IonCardSubtitle, IonCardTitle } fro
 
 
 const API_KEY   = '2017f7a755664a0f928e3a94c634c468';
-const BASE_URL  = 'https://newsapi.org/v2/everything?sortBy=popularity&pageSize=1&apiKey='
+const BASE_URL  = 'https://newsapi.org/v2/everything?sortBy=popularity&language=en&pageSize=1&apiKey='
                 + API_KEY + "&q=";
 const MAIN_CATEGORY = "mainNewsCategory";
 const COOKIE = new CookieService();
